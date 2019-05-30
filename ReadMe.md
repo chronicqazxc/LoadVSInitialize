@@ -1,8 +1,7 @@
 # +Load VS +Initialize
 
 ## +load
-[+load](https://developer.apple.com/documentation/objectivec/nsobject/1418815-load)
-`+load` is invoked as the class or category is added to the Objective-C runtime. It is suit to make a class setup for instance `Swizzle methods`. There are some features about `+load`.
+[+load](https://developer.apple.com/documentation/objectivec/nsobject/1418815-load) is invoked as the class or category is added to the Objective-C runtime. It is suit to make a class setup for instance `Swizzle methods`. There are some features about `+load`.
 1. Will be invoked even you didn't called the class.  
 ![](./Load1.png)  
 2. Be invoked before `main` function.
@@ -11,8 +10,7 @@
 ![](./Load3.png)
 
 ## +initialize
-[initialize](https://developer.apple.com/documentation/objectivec/nsobject/1418639-initialize)
-`+initialize` is invoked just before the class or any class that inherited from it, is sent its first message.
+[initialize](https://developer.apple.com/documentation/objectivec/nsobject/1418639-initialize) is invoked just before the class or any class that inherited from it, is sent its first message.
 Since `+initialize` is called in a blocking manner, we should avoid complexity operation in there.  
 There are some feature about `+initialize`.
 1. Wouldn't be called if you didn't sent any message to the class.  
